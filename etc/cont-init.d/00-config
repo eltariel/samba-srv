@@ -1,0 +1,5 @@
+#!/command/with-contenv sh
+
+/usr/sbin/addgroup -g $PGID samba > /dev/null 2&>1
+/usr/sbin/adduser -S -G samba -u $PUID -H -D $USERNAME
+echo "$PASSWORD" | tee - | /usr/bin/smbpasswd -s -c /etc/samba/smb.conf -a $USERNAME

@@ -1,0 +1,3 @@
+#!/command/execlineb -P
+
+/usr/sbin/nmbd --no-process-group --foreground
